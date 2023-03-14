@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/baszz
 echo $((2#BINARY))

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# displays Best School word 10 times.
+
+Houre=0
+minute=1
+while [ "$Houre" -lt 12 ];
+do
+	echo "Hour: $Houre"
+	minute=1
+	while [ "$minute" -lt 60 ];
+	do
+		echo "$minute"
+		((minute=minute+1))
+	done
+	((Houre=Houre+1))
+done

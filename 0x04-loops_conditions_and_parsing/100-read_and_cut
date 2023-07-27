@@ -2,7 +2,7 @@
 # displays the content of the file /etc/passwd.
 #username, user id, Home directory path for the user.
 
-while read -r PASSWD;
+while read -r pswd;
 do
-	echo $PASSWD | cut -d ':' -f1,3,6
+	echo "$pswd" | cut -d ':' -f1,3,6
 done < /etc/passwd

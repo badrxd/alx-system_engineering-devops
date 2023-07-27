@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # displays Best School word 10 times.
 
-i=1
+i=0
 
 until [ $i == 10 ];
 do

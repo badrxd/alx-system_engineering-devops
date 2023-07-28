@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that stops 7-highlander process.
+
+new_ps=$(ps aux | pgrep -f 'highlander')
+kill -9 "$new_ps"

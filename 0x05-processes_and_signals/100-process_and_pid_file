@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# bash
 
 function kill_1() {
 	echo "I hate the kill command"

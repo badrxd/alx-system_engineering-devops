@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script that stops 7-highlander process.
+
+new_ps="7-highlander"
+pkill -f "$new_ps"

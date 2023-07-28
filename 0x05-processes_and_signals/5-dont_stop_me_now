@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # script that stops 4-to_infinity_and_beyond process.
 
-new_ps=$(ps aux | grep 'to_infinity_and_beyond' | awk ' NR == 1 {print $2}')
-kill $new_ps
+new_ps=$(ps aux | pgrep -f 'to_infinity_and_beyond')
+kill "$new_ps"

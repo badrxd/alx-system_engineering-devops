@@ -3,8 +3,8 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html" title="The <code>for</code> loop&quot; target=&ldquo;_blank&rdquo;>The <code>for</code> loop</a> </li>
-<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html" title="The <code>while</code> loop&quot; target=&ldquo;_blank&rdquo;>The <code>while</code> loop</a> </li>
+<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html" title="The for loop">The for loop</a> </li>
+<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html" title="The while loop">The while loop</a> </li>
 <li><a href="/rltoken/nl_7uNvLtjRrH1C62_IF_g" title="The <code>until</code> loop&quot; target=&ldquo;_blank&rdquo;>The <code>until</code> loop</a> </li>
 <li><a href="/rltoken/U93Es1esHYob0oDmydSVAg" title="Loops sample" target="_blank">Loops sample</a> </li>
 <li><a href="/rltoken/olvOKX699pq50rkHRE5cSA" title="Variable assignment and arithmetic" target="_blank">Variable assignment and arithmetic</a> </li>

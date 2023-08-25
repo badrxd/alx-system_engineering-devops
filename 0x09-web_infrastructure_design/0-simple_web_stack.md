@@ -1,6 +1,6 @@
 # 0-simple_web_stack
 
-## Specifics about this infrastructure `0-simple_web_stack`
+## Specifics about this infrastructure `0-simple_web_stack `
 
 #### What is a server?
 - Server is a computer it can be a a real or virtual computer that provides resources and data and services, to other computers, known as clients.

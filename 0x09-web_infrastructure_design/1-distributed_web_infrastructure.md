@@ -2,7 +2,7 @@
 
 ## Specifics about this infrastructure `1-distributed_web_infrastructure`
 
-#### What is a server?
+#### For every additional element, why you are adding it?
 - We add load balancer to redirect the request to server who is available or not in pressure
 #### What distribution algorithm your load balancer is configured with and how it works?
 - The load balancer HAProxy is configured with the Round Robin distribution algorithm. this algorithm pass each request gets assigned to each server one by one and the round goes on.

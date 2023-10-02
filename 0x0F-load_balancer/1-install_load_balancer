@@ -12,7 +12,7 @@ backend web-backend
    server web-01 18.204.20.153:80 check
    server web-02 54.210.121.255:80 check
 
-frontend http
+frontend web-front
   bind *:80
   default_backend web-backend
 EOL

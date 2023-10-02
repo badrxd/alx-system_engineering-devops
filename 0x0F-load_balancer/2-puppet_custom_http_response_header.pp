@@ -1,6 +1,16 @@
 # change configure nginx
 
-exec { 'add_content':
+exec { 'update':
+  command  => 'sudo apt-get -y update',
+  provider => shell,
+}
+
+-> exec { 'install':
+  command  => 'sudo apt-get -y install nginx',
+  provider => shell,
+}
+
+-> exec { 'add_content':
     command  => 'sudo sed -i "/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default',
     provider => shell,
 }

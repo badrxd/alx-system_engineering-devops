@@ -1,4 +1,4 @@
-# change configure nginx
+#change configure nginx
 
 exec { 'update':
   command  => 'sudo apt-get -y update',

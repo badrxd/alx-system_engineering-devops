@@ -1,4 +1,4 @@
-sudo uft allow 22/tcp
-sudo uft allow http
-sudo uft allow https
-sudo uft enable
+uft allow 22/tcp
+uft allow 80/tcp
+uft allow 443/tcp
+uft enable

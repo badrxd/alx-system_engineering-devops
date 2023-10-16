@@ -1,0 +1,4 @@
+uft allow 22/tcp
+uft allow http
+uft allow https
+uft enable

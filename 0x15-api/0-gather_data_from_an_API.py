@@ -4,24 +4,46 @@ returns information about his/her todo list progress.
 """
 
 import requests
-from sys import argv
-
+import sys
 
 if __name__ == "__main__":
-    """ get user name and todo list progress"""
+    if len(sys.argv) < 2:
+        print("Usage: {} <employee ID>".format(sys.argv[0]))
+        sys.exit(1)
 
-    url = "https://jsonplaceholder.typicode.com/"
-    todo_list = requests.get(url + "user/{}/todos".format(argv[1])).json()
-    user = (requests.get(url + "users/{}".format(argv[1])).json().get("name"))
+    try:
+        id = int(sys.argv[1])
+    except ValueError:
+        print("Employee ID must be an integer")
+        sys.exit(1)
 
-    titles = []
-    counter = 0
-    for todo in todo_list:
-        if todo.get("completed"):
-            counter += 1
-            titles.append(todo.get("title"))
+    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(
+        id
+    )
+    todos_url = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
+        id
+    )
 
-    print("Employee {} is done with tasks({}/{}):"
-          .format(user, counter, len(todo_list)))
-    for title in titles:
-        print("\t {}".format(title))
+    response = requests.get(user_url)
+    if response.status_code != 200:
+        print("Error: Unable to fetch the user data")
+        sys.exit(1)
+
+    user = response.json()
+    name = user.get("name")
+
+    response = requests.get(todos_url)
+    if response.status_code != 200:
+        print("Error: Unable to fetch the todos data")
+        sys.exit(1)
+
+    todos = response.json()
+    done_tasks = [task for task in todos if task.get("completed")]
+
+    print(
+        "Employee {} is done with tasks({}/{}):".format(
+            name, len(done_tasks), len(todos)
+        )
+    )
+    for task in done_tasks:
+        print("\t {}".format(task.get("title")))

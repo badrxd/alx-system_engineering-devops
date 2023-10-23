@@ -7,8 +7,6 @@ from sys import argv
 if __name__ == '__main__':
     """ """
     base_url = 'https://jsonplaceholder.typicode.com/'
-    # user = '{}users/{}'.format(base_url, argv[1])
-
     EMPLOYEE_NAME = requests.get(
         '{}users/{}'.format(base_url, argv[1])).json()
     NUMBER_OF_DONE_TASKS = requests.get(

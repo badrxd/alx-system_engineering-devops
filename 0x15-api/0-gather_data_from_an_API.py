@@ -10,9 +10,9 @@ from sys import argv
 if __name__ == "__main__":
     """ get user name and todo list progress"""
 
-    url = "https://jsonplaceholder.typicode.com"
-    todo_list = requests.get(url + "/user/{}/todos".format(argv[1])).json()
-    user = (requests.get(url + "/users/{}".format(argv[1])).json().get("name"))
+    url = "https://jsonplaceholder.typicode.com/"
+    todo_list = requests.get(url + "user/{}/todos".format(argv[1])).json()
+    user = (requests.get(url + "users/{}".format(argv[1])).json().get("name"))
 
     titles = []
     counter = 0

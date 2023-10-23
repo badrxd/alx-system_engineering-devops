@@ -3,7 +3,6 @@
 returns information about his/her todo list progress.
 """
 
-import sys
 import requests
 from sys import argv
 

@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""script that, using this REST API, for a given employee ID,
-returns information about his/her todo list progress.
+"""return the user an ac
 """
 
 import requests
 import sys
 
 if __name__ == "__main__":
+    """ script that, using this REST API, for a given employee"""
     if len(sys.argv) < 2:
         print("Usage: {} <employee ID>".format(sys.argv[0]))
         sys.exit(1)

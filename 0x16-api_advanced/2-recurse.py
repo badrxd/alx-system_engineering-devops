@@ -7,6 +7,9 @@ import requests
 def recurse(subreddit, hot_list=[], after=None):
     """send get http req to Reddit API and returns 10 hot posts titels"""
 
+    if subreddit is None:
+        return None
+
     data = requests.get("https://www.reddit.com/r/{}/hot.json?after={}"
                         .format(subreddit, after),
                         headers={"User-Agent": "My-User-Agent"},

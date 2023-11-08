@@ -4,7 +4,7 @@ import requests
 
 
 def count_words(subreddit, word_list, Dict={}, after=None):
-    """send get http req to Reddit API and returns 10 hot posts titels"""
+    """print hot post base on the programming language"""
 
     if subreddit is None:
         return None

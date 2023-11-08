@@ -25,11 +25,14 @@ def count_words(subreddit, word_list, Dict={}, after=None):
             print('{}: {}'.format(key, value))
         return
     else:
-        titels = data.json()["data"]["children"]
-        for title in titels:
+        post = data.json()["data"]["children"]
+        for title in post:
+            split_words = title.get('data').get('title').lower().split(' ')
             for word in word_list:
-                if word in title.get('data').get('title').lower():
-                    if word not in Dict:
-                        Dict[word] = 0
-                    Dict[word] = Dict[word]+1
+                for word_2 in split_words:
+                    word = word.lower()
+                    if word == word_2:
+                        if word not in Dict:
+                            Dict[word] = 0
+                        Dict[word] = Dict[word]+1
         return count_words(subreddit, word_list, Dict, after=the_after)

@@ -2,5 +2,5 @@
 # Get the Gunicorn master process ID
 
 master_pid=$(pgrep -f "gunicorn.*--workers")
-kill -s HUP $master_pid
+kill -s HUP $"master_pid"
 
